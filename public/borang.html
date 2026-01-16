@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Aduan Kerosakan - IKM Besut</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="ikm.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background: #003366; padding: 20px;">
+
+    <div class="main-wrapper">
+        <div class="container" style="max-width: 600px; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            
+            <header class="header-section" style="text-align: center; margin-bottom: 30px;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 20px;">
+                    <img src="mara.png" alt="Logo MARA" style="width: 70px; height: auto;">
+                    <img src="ikm.png" alt="Logo IKM" style="width: 80px; height: auto;">
+                </div>
+                <h2 style="color: #0054a6; margin-bottom: 5px;">Sistem Aduan Kerosakan</h2>
+                <p style="color: #64748b;">Unit Pengurusan Asrama IKM Besut</p>
+            </header>
+
+            <form id="aduanForm">
+                <h4 style="color: #d63031; margin-bottom: 15px;"><i class="fas fa-user-graduate"></i> Maklumat Pelajar</h4>
+                
+                <div class="form-group">
+                    <label>Nama Penuh</label>
+                    <input type="text" id="nama" placeholder="Nama Penuh Mengikut IC" required>
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label>No. NDP (Matrik)</label>
+                        <input type="text" id="noMatrik" placeholder="Cth: 33221001" required>
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label>No. Telefon</label>
+                        <input type="text" id="noTel" placeholder="01x-xxxxxxx" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Program / Kursus</label>
+                    <select id="program" required>
+                        <option value="">-- Pilih Kod Program --</option>
+                        <option value="DFK">DFK - Cloud Computing</option>
+                        <option value="DSE">DSE - Software Engineering</option>
+                        <option value="DCN">DCN - Networking</option>
+                    </select>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 25px 0;">
+                <h4 style="color: #d63031; margin-bottom: 15px;"><i class="fas fa-tools"></i> Butiran Kerosakan</h4>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label>Blok</label>
+                        <select id="blok" required>
+                            <option value="Blok A">Blok A</option>
+                            <option value="Blok B">Blok B</option>
+                            <option value="Blok C">Blok C</option>
+                            <option value="Blok D">Blok D</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label>No. Bilik</label>
+                        <input type="text" id="noBilik" placeholder="Cth: B214" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Kategori Isu</label>
+                    <select id="kategori" required>
+                        <option value="Elektrik">Elektrik (Lampu/Kipas)</option>
+                        <option value="Perabot">Perabot (Katil/Meja/Almari)</option>
+                        <option value="Paip">Paip / Tandas</option>
+                        <option value="Awam">Kerosakan Awam</option>
+                        <option value="Lain-lain">Lain-lain</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Butiran Masalah</label>
+                    <textarea id="butiran" rows="3" placeholder="Ceritakan kerosakan yang berlaku..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="btnHantar" style="width: 100%; padding: 15px; font-weight: 700;">
+                    HANTAR ADUAN <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+
+            <footer style="text-align: center; margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 10px;">&copy; 2026 Unit Pengurusan Asrama IKM Besut.</p>
+                <a href="index.html" style="text-decoration: none; color: #0054a6; font-weight: 600; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Balik ke Portal Utama
+                </a>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

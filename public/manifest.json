@@ -1,0 +1,21 @@
+{
+  "name": "Sistem Aduan Asrama IKM",
+  "short_name": "E-Aduan",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0054a6",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "ikm.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "ikm.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

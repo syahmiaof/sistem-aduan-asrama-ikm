@@ -1,0 +1,168 @@
+/* --- GOOGLE FONT & RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Font moden */
+}
+
+/* --- BACKGROUND CANTIK --- */
+body {
+    /* Gradient serong dari Biru MARA ke Ungu Gelap */
+    background: linear-gradient(135deg, #0054a6 0%, #1a237e 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+/* --- CONTAINER (KAD PUTIH) --- */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95); /* Putih sedikit telus */
+    width: 100%;
+    max-width: 550px;
+    padding: 40px 30px;
+    border-radius: 20px; /* Bucu lebih bulat */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3); /* Bayang tebal supaya timbul */
+    backdrop-filter: blur(10px); /* Effect kaca */
+    animation: fadeIn 0.8s ease-in-out; /* Animasi masuk */
+}
+
+/* --- LOGO & HEADER --- */
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.logo { display: block; height: auto; object-fit: contain; }
+.mara-logo { width: 100px; } /* Saiz dilaraskan */
+.ikm-logo { width: 140px; }  /* Saiz dilaraskan */
+
+.header-section h1 {
+    font-size: 1.6rem;
+    color: #0054a6;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+.header-section p {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* --- KOTAK SEKSYEN (Bagi nampak teratur) --- */
+.section-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.section-title {
+    font-size: 1rem;
+    color: #ed1c24; /* Merah MARA */
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- FORM INPUT --- */
+.form-group { margin-bottom: 15px; }
+.form-row { display: flex; gap: 15px; }
+.form-row .form-group { flex: 1; }
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #eee; /* Border nipis */
+    border-radius: 12px;
+    background: #fff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Effect bila user tekan input (Glow Biru) */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #0054a6;
+    box-shadow: 0 0 0 4px rgba(0, 84, 166, 0.1);
+}
+
+/* --- BUTTON POWER --- */
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(90deg, #0054a6 0%, #007bff 100%); /* Gradient Biru */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(0, 84, 166, 0.3); /* Bayang biru */
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px); /* Naik sikit bila hover */
+    box-shadow: 0 15px 30px rgba(0, 84, 166, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 480px) {
+    .container { padding: 30px 20px; }
+    .form-row { flex-direction: column; gap: 0; }
+    .mara-logo { width: 90px; }
+    .ikm-logo { width: 120px; }
+}
+
+.footer-section {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 25px;
+}
+
+/* Animasi Masuk */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

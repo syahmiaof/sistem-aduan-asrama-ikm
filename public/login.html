@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - Aduan Asrama</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="ikm.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="container" style="max-width: 400px;"> 
+            
+            <header class="header-section">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 15px;">
+                    <img src="mara.png" alt="Logo MARA" class="logo" style="width: 70px; height: auto; margin: 0;">
+                    <img src="ikm.png" alt="Logo IKM" class="logo" style="width: 80px; height: auto; margin: 0;">
+                </div>
+                
+                <h1>Login Warden</h1>
+                <p>Akses Khas Admin Sahaja</p>
+            </header>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Email Admin</label>
+                    <input type="email" id="email" placeholder="nama@ikm.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Kata Laluan</label>
+                    <input type="password" id="password" placeholder="Masukan password..." required>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    MASUK SISTEM <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+
+            <footer class="footer-section">
+                <p><a href="index.html" style="text-decoration: none; color: #0054a6;">&larr; Kembali ke Halaman Utama</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module">
+        // Import fungsi Login dari Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+        // --- KONFIGURASI FIREBASE ---
+        const firebaseConfig = {
+            apiKey: "AIzaSyA1c1Q2Sl-ARdY3GxV2UJRKFSb2R_AW1DE",
+            authDomain: "sistem-aduan-asrama-ikm.firebaseapp.com",
+            projectId: "sistem-aduan-asrama-ikm",
+            storageBucket: "sistem-aduan-asrama-ikm.firebasestorage.app",
+            messagingSenderId: "1070757792008",
+            appId: "1:1070757792008:web:40388ffb7f994ee0e044bd",
+            measurementId: "G-HQ2SG9489R"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Logic bila tekan butang LOGIN
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault(); // Halang page reload
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const btn = document.querySelector('.btn-submit');
+
+            // Tukar text butang jadi "Loading..."
+            btn.innerHTML = 'Sedang Semak... <i class="fas fa-spinner fa-spin"></i>';
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Login Berjaya!
+                    // alert("Login Berjaya! Selamat Datang Tuan."); // Boleh comment kalau semak
+                    window.location.href = "admin.html"; // Redirect ke dashboard
+                })
+                .catch((error) => {
+                    // Login Gagal
+                    console.error(error);
+                    alert("Gagal: Email atau Password salah!");
+                    btn.innerHTML = 'MASUK SISTEM <i class="fas fa-sign-in-alt"></i>'; // Reset butang
+                });
+        });
+    </script>
+</body>
+</html>

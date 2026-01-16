@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal E-Aduan Asrama IKM Besut</title>
+    
+    <link rel="apple-touch-icon" href="ikm.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" href="ikm.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --accent: #3b82f6;
+            --text: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; padding: 20px;
+        }
+
+        /* Animasi Logo */
+        .logo-container { margin-bottom: 30px; animation: float 3s ease-in-out infinite; }
+        .logo { width: 120px; height: 120px; object-fit: contain; filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5)); }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; line-height: 1.2; }
+        p { font-size: 1.1rem; color: #94a3b8; margin-bottom: 40px; max-width: 600px; }
+
+        /* Kad Pilihan */
+        .card-container {
+            display: flex; gap: 20px; width: 100%; max-width: 800px; justify-content: center; flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px; border-radius: 20px;
+            width: 100%; max-width: 300px;
+            transition: 0.3s; cursor: pointer; text-decoration: none; color: white;
+        }
+
+        .card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.1); border-color: var(--accent); }
+
+        .icon-box {
+            font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;
+            background: rgba(59, 130, 246, 0.1); width: 70px; height: 70px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; margin-left: auto; margin-right: auto;
+        }
+
+        .card h3 { font-size: 1.2rem; margin-bottom: 5px; }
+        .card span { font-size: 0.9rem; color: #94a3b8; }
+
+        footer { margin-top: 50px; font-size: 0.8rem; color: #64748b; }
+
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } .card-container { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+
+   <div class="logo-container" style="display: flex; justify-content: center; gap: 20px;">
+        <img src="mara.png" alt="Logo MARA" class="logo">
+        <img src="ikm.png" alt="Logo IKM" class="logo">
+    </div>
+
+    <h1>Portal E-Aduan<br><span style="color: #3b82f6;">Asrama IKM Besut</span></h1>
+    <p>Sistem pengurusan kerosakan dan fasiliti asrama berasaskan teknologi awan (Cloud Native).</p>
+
+    <div class="card-container">
+        <a href="borang.html" class="card">
+            <div class="icon-box"><i class="fas fa-edit"></i></div>
+            <h3>Lapor Aduan</h3>
+            <span>Buat aduan kerosakan baru</span>
+        </a>
+
+        <a href="semak.html" class="card">
+            <div class="icon-box"><i class="fas fa-search"></i></div>
+            <h3>Semak Status</h3>
+            <span>Pantau status aduan anda</span>
+        </a>
+
+        <a href="login.html" class="card">
+            <div class="icon-box"><i class="fas fa-user-shield"></i></div>
+            <h3>Warden</h3>
+            <span>Log masuk panel admin</span>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2026 Diploma Teknologi Komputer (Cloud Computing)<br>
+        Built by syahmiaof
+    </footer>
+
+</body>
+</html>
