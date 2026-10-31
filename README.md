@@ -1,21 +1,30 @@
-# Sistem Aduan Asrama IKM Besut
-
 <div align="center">
-  <img src="public/preview.png" alt="Portal E-Aduan Asrama IKM Besut Preview" width="100%" />
-
+  <h1>SISTEM ADUAN ASRAMA IKM BESUT</h1>
   <p><strong>From a reported hostel problem to a visible status.</strong></p>
   <p>Sistem pengurusan aduan fasiliti & kerosakan asrama berasaskan teknologi awan (Cloud Native Serverless), dibangunkan untuk pelajar dan warden Institut Kemahiran MARA (IKM) Besut.</p>
 
   <p>
     <a href="https://sistemaduanasrama.syahmiaof.my"><img src="https://img.shields.io/badge/Demo-Live-60E1B5?style=for-the-badge&logoColor=60E1B5&labelColor=101713" alt="Demo Live" /></a>
-    <a href="https://github.com/syahmiaof/sistem-aduan-asrama-ikm"><img src="https://img.shields.io/badge/Source-GitHub-60E1B5?style=for-the-badge&logo=github&logoColor=60E1B5&labelColor=101713" alt="GitHub" /></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-60E1B5?style=for-the-badge&logoColor=60E1B5&labelColor=101713" alt="License" /></a>
-    <a href="https://github.com/syahmiaof/sistem-aduan-asrama-ikm/actions"><img src="https://img.shields.io/badge/CI-Passing-60E1B5?style=for-the-badge&logo=githubactions&logoColor=60E1B5&labelColor=101713" alt="CI" /></a>
-    <a href="https://syahmiaof.my"><img src="https://img.shields.io/badge/Portfolio-syahmiaof.my-60E1B5?style=for-the-badge&logo=vercel&logoColor=60E1B5&labelColor=101713" alt="Portfolio" /></a>
+    <a href="https://github.com/syahmiaof/sistem-aduan-asrama-ikm"><img src="https://img.shields.io/badge/Source-GitHub-60E1B5?style=for-the-badge&logo=github&logoColor=60E1B5&labelColor=101713" alt="GitHub Source" /></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-All_Rights_Reserved-60E1B5?style=for-the-badge&logoColor=60E1B5&labelColor=101713" alt="License: All Rights Reserved" /></a>
+    <a href="https://github.com/syahmiaof/sistem-aduan-asrama-ikm/actions"><img src="https://img.shields.io/badge/CI-Passing-60E1B5?style=for-the-badge&logo=githubactions&logoColor=60E1B5&labelColor=101713" alt="CI Passing" /></a>
+    <a href="https://syahmiaof.my"><img src="https://img.shields.io/badge/Author-syahmiaof-60E1B5?style=for-the-badge&logo=vercel&logoColor=60E1B5&labelColor=101713" alt="Author" /></a>
   </p>
 
-  <br />
+  <img src="public/preview.png" alt="Portal E-Aduan Asrama IKM Besut Preview" width="100%" style="border-radius: 8px; box-shadow: 0 0 30px rgba(96,225,181,0.2);" />
+
+  <br/><br/>
+
+  <p><a href="https://sistemaduanasrama.syahmiaof.my">Live Portal</a> • <a href="#-project-overview">Overview</a> • <a href="#-sorotan--ciri-utama">Ciri Utama</a> • <a href="#%EF%B8%8F-seni-bina-sistem">Seni Bina</a> • <a href="#-tech-stack">Tech Stack</a></p>
 </div>
+
+---
+
+## 💎 Project Overview
+
+- **Functionality**: Cloud-native student hostel facility maintenance ticketing system connecting a progressive web application (PWA) with Firebase Firestore realtime storage, warden dashboard analytics, and instant Telegram Bot alerts.
+- **Aesthetic Value**: Clean institutional dark-mode interface with Chart.js analytics breakdown, transparent student status tracking, and fluid state notifications.
+- **Business Value**: Eliminates manual paper logging at Institut Kemahiran MARA Besut, accelerating contractor repair turnaround time and enhancing campus safety accountability.
 
 ---
 
@@ -31,7 +40,7 @@
 
 ## 🏗️ Seni Bina Sistem
 
-```
+```text
 ┌─────────────────┐       ┌──────────────────────┐       ┌────────────────────────┐
 │  Pelajar (PWA)  │ ────> │  Cloud Firestore DB  │ <───> │  Admin Dashboard       │
 │  Isi Borang     │       │  Penyimpanan Realtime│       │  Warden Urus & Kemas   │
@@ -48,40 +57,14 @@
 
 ## 🛠️ Tech Stack
 
-| Bahagian | Teknologi |
-|---|---|
-| **Antaramuka (Frontend)** | HTML5 Semantik, CSS3 Moden (Flexbox & Grid), Vanilla JavaScript (ES6+ Modules) |
-| **Awan & Pangkalan Data** | Firebase Firestore (Realtime NoSQL), Firebase Hosting, Firebase Auth |
-| **Notifikasi Luar** | Telegram Bot API |
-| **Visualisasi & Komponen** | Chart.js, SweetAlert2, Font Awesome icons |
-| **Automasi & CI** | GitHub Actions (`.github/workflows/ci.yml`) |
-
----
-
-## ⚙️ Persediaan Tempatan & Konfigurasi Bot Telegram
-
-Bagi membolehkan notifikasi dihantar ke Telegram warden, token disimpan di luar repositori awam:
-
-1. Buat bot baharu melalui [@BotFather](https://t.me/BotFather) dan peroleh token bot.
-2. Dapatkan ID bilik perbualan atau kumpulan warden melalui [@userinfobot](https://t.me/userinfobot).
-3. Lampirkan konfigurasi selamat dalam persekitaran aplikasi:
-   ```javascript
-   window.__ENV = {
-     TELEGRAM_BOT_TOKEN: "YOUR_BOT_TOKEN",
-     TELEGRAM_CHAT_ID: "YOUR_CHAT_ID"
-   };
-   ```
-
----
-
-## 🧪 Validasi & Ujian Automasi
-
-Projek ini dilengkapi dengan skrip pengesahan integriti fail dan imbasan keselamatan token:
-
-```bash
-# Menjalankan pengesahan integriti aset dan keselamatan rahsia
-npm test
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/Firebase_Firestore-101713?style=for-the-badge&logo=firebase&logoColor=60E1B5&labelColor=101713" alt="Firebase Firestore" />
+  <img src="https://img.shields.io/badge/Firebase_Hosting-101713?style=for-the-badge&logo=firebase&logoColor=60E1B5&labelColor=101713" alt="Firebase Hosting" />
+  <img src="https://img.shields.io/badge/Vanilla_JavaScript_ES6+-101713?style=for-the-badge&logo=javascript&logoColor=60E1B5&labelColor=101713" alt="JavaScript ES6+" />
+  <img src="https://img.shields.io/badge/Telegram_Bot_API-101713?style=for-the-badge&logo=telegram&logoColor=60E1B5&labelColor=101713" alt="Telegram Bot API" />
+  <img src="https://img.shields.io/badge/Chart.js-101713?style=for-the-badge&logo=chartdotjs&logoColor=60E1B5&labelColor=101713" alt="Chart.js" />
+  <img src="https://img.shields.io/badge/PWA-101713?style=for-the-badge&logo=pwa&logoColor=60E1B5&labelColor=101713" alt="PWA" />
+</p>
 
 ---
 
@@ -91,18 +74,20 @@ Projek pelajar berfungsi sepenuhnya. Repositori awam mendokumentasikan aliran ap
 
 ---
 
+## 📜 Lesen & Hak Cipta
+
+Hak cipta terpelihara (c) 2026 **Muhammad Syahmi (syahmiaof)**. Dilesenkan di bawah [Proprietary All Rights Reserved](LICENSE).
+
+---
+
 ## 👤 Pembangun
 
 * **Nama:** [Muhammad Syahmi (syahmiaof)](https://github.com/syahmiaof)
 * **Peranan:** Pelajar Diploma Teknologi Komputer (Cloud Computing), Institut Kemahiran MARA (IKM) Besut
 * **Portfolio:** [syahmiaof.my](https://syahmiaof.my)
-* **Emel:** [syahmiaof123@gmail.com](mailto:syahmiaof123@gmail.com)
+* **Live Portal:** [sistemaduanasrama.syahmiaof.my](https://sistemaduanasrama.syahmiaof.my)
 
 ---
-
-## 📄 Lesen
-
-Projek ini dilesenkan di bawah [Lesen MIT](LICENSE) — lihat fail [LICENSE](LICENSE) untuk maklumat penuh.
 
 <div align="center">
   <p>© 2026 <strong>Muhammad Syahmi (syahmiaof)</strong>. Hak Cipta Terpelihara.</p>
