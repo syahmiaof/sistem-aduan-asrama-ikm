@@ -19,9 +19,14 @@ const db = getFirestore(app);
 
 // --- 🤖 FUNGSI TELEGRAM BOT ---
 async function hantarKeTelegram(nama, noMatrik, blok, bilik, kategori, butiran) {
-    // Token & ID kau (JANGAN UBAH DAH, NI BETUL)
-    const token = "8523939341:AAEL-XO2nyYV6svViT8O-mANejQymUsFnYU";
-    const chat_id = "1076607714"; 
+    // Token & Chat ID Telegram (Dikonfigurasi melalui window.__ENV bagi mengelakkan kebocoran rahsia)
+    const token = (typeof window !== "undefined" && window.__ENV && window.__ENV.TELEGRAM_BOT_TOKEN) || "";
+    const chat_id = (typeof window !== "undefined" && window.__ENV && window.__ENV.TELEGRAM_CHAT_ID) || ""; 
+
+    if (!token || !chat_id) {
+        console.warn("[Telegram Bot] Token atau Chat ID belum dikonfigurasikan. Sila tetapkan window.__ENV.TELEGRAM_BOT_TOKEN dan TELEGRAM_CHAT_ID.");
+        return;
+    }
     
     // Susun mesej cantik-cantik untuk Telegram
     const mesej = `

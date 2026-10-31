@@ -1,0 +1,19 @@
+{
+  "name": "sistem-aduan-asrama-ikm",
+  "version": "1.0.0",
+  "description": "Sistem Pengurusan Aduan Kerosakan Asrama IKM Besut berasaskan Cloud Native Serverless",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/validate.js",
+    "lint": "node scripts/validate.js"
+  },
+  "keywords": [
+    "pwa",
+    "firebase",
+    "firestore",
+    "cloud-native",
+    "telegram-bot"
+  ],
+  "author": "Muhammad Syahmi (syahmiaof)",
+  "license": "MIT"
+}
